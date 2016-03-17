@@ -1,0 +1,73 @@
+/*
+Theme Name: Kamarouski
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Roboto", "serif";
+  letter-spacing: 0.5px;
+}
+
+body {
+  background-color: #eee;
+}
+
+.main-wrapper {
+  background-color: #fff;
+  margin: 0 auto;
+  max-width: 980px;
+  padding: 30px 90px;
+}
+
+.menu {
+  background-color: #009688;
+  margin: 0 auto;
+  max-width: 980px;
+}
+
+.menu a {
+  color: #eee;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 30px 15px;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.menu a:hover {
+  color: #aaa;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul li {
+  list-style: none;
+}
+
+article header a {
+  color: #444;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 40px;
+}
+
+article header h2 {
+  font-size: 40px;
+  line-height: 60px;
+}
+
+article p {
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  color: #444;
+}
