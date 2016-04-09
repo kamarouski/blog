@@ -1,0 +1,49 @@
+---
+layout: default
+---
+<!--<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+</article> -->
+
+
+<article>
+  <header>
+    <h2>{{ page.title }}</h2>
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time>{% if page.author %} • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>{% endif %}</p>
+  </header>
+  <div>{{ content }}</div>
+</article>
+<nav class="post-nav" style="margin-top: 20px;">
+    <span class="prev-post-nav">
+    {% if page.previous.url %}
+        <a href="{{page.previous.url}}" title="{{page.previous.title}}"><button><i class="material-icons">arrow_back</i></button><div>{{page.previous.title}}</div></a>
+    {% endif %}
+    </span>
+    <span class="next-post-nav">
+    {% if page.next.url %}
+        <a href="{{page.next.url}}" title="{{page.next.title}}"><div>{{page.next.url}}</div><button><i class="material-icons">arrow_forward</i></button></a>
+    {% endif %}
+    </span>
+</nav>
+<div class="comments">
+    <div id="disqus_thread"></div>
+    <script>
+    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+            var d = document, s = d.createElement('script');
+
+            s.src = '//kamarouski.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
+
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+</div>

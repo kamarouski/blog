@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class="posts-latest">
+    {% for post in site.posts %}
+        <article>
+        <header><h2><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2></header>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+        <div>{{ post.excerpt }}</div>
+        <div class="more-link-wrapper"><a class="more-link" href="{{post.url}}"><span>More&nbsp;&nbsp;</span><button><i class="material-icons">arrow_forward</i></button></a></div>
+      </article>
+    {% endfor %}
+  </ul>
+</div>
